@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lohiaufung.lab4.MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideLine"
+        app:layout_constraintGuide_begin="22dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="22dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/middleGuideLine"
+        app:layout_constraintGuide_begin="80dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/rightGuideLine"
+        app:layout_constraintGuide_end="22dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="362dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/CenterGuideLine"
+        app:layout_constraintGuide_end="180dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="204dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中山大学学生信息系统"
+        android:id="@+id/title"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:src="@mipmap/sysu"
+        android:id="@+id/img_sysu"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_width="215dp"
+        android:layout_height="215dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/sidBox"
+        android:textSize="18sp"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@+id/img_sysu"
+        app:layout_constraintRight_toLeftOf="@+id/rightGuideLine"
+        app:layout_constraintLeft_toLeftOf="@+id/guideLine">
+        <EditText
+
+            android:hint="请输入学号"
+            app:layout_constraintTop_toBottomOf="@+id/img_sysu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/middleGuideLine"
+            app:layout_constraintRight_toLeftOf="@+id/rightGuideLine"
+            android:inputType="number"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/pwBox"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/sidBox"
+        android:maxLines="1"
+        app:layout_constraintRight_toLeftOf="@+id/rightGuideLine"
+        app:layout_constraintLeft_toLeftOf="@+id/guideLine">
+        <EditText
+
+            android:hint="请输入密码"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layout_constraintLeft_toRightOf="@id/middleGuideLine"
+            app:layout_constraintRight_toLeftOf="@+id/rightGuideLine"
+            android:inputType="textPassword"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/signInOrSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toLeftOf="@+id/rightGuideLine"
+        app:layout_constraintLeft_toLeftOf="@+id/guideLine"
+        app:layout_constraintTop_toBottomOf="@+id/pwBox"
+       >
+
+        <RadioButton
+            android:id="@+id/studentRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textSize="18sp"
+            android:text="学生"
+            android:layout_marginRight="5dp"
+            />
+        <RadioButton
+            android:id="@+id/staffRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="教职工"
+            android:layout_marginLeft="5dp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/signIn"
+        android:background="@drawable/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登陆"
+        android:textColor="#FFFFFF"
+
+        android:layout_marginRight="5dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/signInOrSignUp"
+        app:layout_constraintRight_toLeftOf="@+id/CenterGuideLine"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp" />
+    <Button
+        android:id="@+id/signUp"
+        android:background="@drawable/button"
+        android:text="注册"
+        android:textColor="#FFFFFF"
+
+        app:layout_constraintTop_toBottomOf="@+id/signInOrSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintLeft_toLeftOf="@+id/CenterGuideLine" />
+</android.support.constraint.ConstraintLayout>
