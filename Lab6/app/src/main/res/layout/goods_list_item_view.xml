@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <online.osslab.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_margin="10dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/good_list_item_circle"
+        app:border_color="#88C34A"
+        app:border_width="2dp"
+        app:shadow="true"
+         />
+    >
+
+    <TextView
+        android:id="@+id/alphaInTheCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="T"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintLeft_toLeftOf="@+id/circleImageView"
+        app:layout_constraintRight_toRightOf="@+id/circleImageView"
+        app:layout_constraintBottom_toBottomOf="@id/circleImageView"
+        app:layout_constraintTop_toTopOf="@id/circleImageView"
+        />
+
+    <TextView
+        android:id="@+id/goodItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toRightOf="@id/circleImageView"
+        app:layout_constraintBottom_toBottomOf="@id/alphaInTheCircle"
+        />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/leftGuideLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp"
+        />
+    <android.support.constraint.Guideline
+        android:id="@+id/rightGuideLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/upperSection"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:background="#1E000000"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/goodDetailImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ferrero" />
+
+        <ImageView
+            android:id="@+id/backToLastPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/goodDetailImage"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/goodDetailImage"
+            android:src="@drawable/empty_star" />
+
+        <TextView
+            android:id="@+id/goodNameInDetailPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@id/goodDetailImage"
+            android:text="goodName"
+            android:textColor="#D5000000"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/goodPriceInDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/upperSection"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        android:text="￥test"
+        android:textColor="#D5000000"
+        android:textSize="22sp"
+        />
+    <TextView
+        android:id="@+id/goodTypeInDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="goodType"
+        android:textColor="#8A000000"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@+id/goodPriceInDetail"
+        app:layout_constraintLeft_toLeftOf="@id/goodPriceInDetail"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/goodTypeInfoInDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goodPriceInDetail"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:text="goodTypeInfo"
+        android:textColor="#8A000000"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toRightOf="@+id/goodTypeInDetail"
+        app:layout_constraintTop_toTopOf="@+id/goodTypeInDetail" />
+    <ImageView
+        android:id="@+id/addToShoppingCarButtonInDetailPage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/shoplist"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/goodTypeInfoInDetail"
+        />
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="#1E000000"
+        app:layout_constraintBottom_toBottomOf="@id/addToShoppingCarButtonInDetailPage"
+        app:layout_constraintRight_toLeftOf="@+id/addToShoppingCarButtonInDetailPage" />
+
+    <ImageView
+        android:id="@+id/divideLine1"
+        android:layout_width="376dp"
+        android:layout_height="2dp"
+        android:background="#1E000000"
+        app:layout_constraintTop_toBottomOf="@+id/goodTypeInDetail"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        app:layout_constraintRight_toLeftOf="@id/rightGuideLine"
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_bias="0.437" />
+
+    <TextView
+        android:id="@+id/moreInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="10dp"
+        android:text="更多产品信息"
+        android:textColor="#D5000000"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="@+id/divideLine1"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <ImageView
+        android:id="@+id/divideLine2"
+        android:layout_width="390dp"
+        android:layout_height="9dp"
+        android:background="#1E000000"
+        app:layout_constraintTop_toBottomOf="@+id/moreInfoTextView"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/orderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="一键下单"
+        android:textColor="#D5000000"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/divideLine2"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <ImageView
+        android:id="@+id/divideLine3"
+        android:layout_width="390dp"
+        android:layout_height="2dp"
+        android:background="#1E000000"
+        app:layout_constraintTop_toBottomOf="@+id/orderTextView"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/shareGoodTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="分享商品"
+        android:textColor="#D5000000"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/divideLine3"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <ImageView
+        android:id="@+id/divideLine4"
+        android:layout_width="390dp"
+        android:layout_height="2dp"
+        android:background="#1E000000"
+        app:layout_constraintTop_toBottomOf="@+id/shareGoodTextView"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/NotInterestedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="不感兴趣"
+        android:textColor="#D5000000"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/divideLine4"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <ImageView
+        android:id="@+id/divideLine5"
+        android:layout_width="390dp"
+        android:layout_height="2dp"
+        android:background="#1E000000"
+        app:layout_constraintTop_toBottomOf="@+id/NotInterestedTextView"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/morePromotionInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="查看更多商品促销信息"
+        android:textColor="#D5000000"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/divideLine5"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <ImageView
+        android:id="@+id/divideLine6"
+        android:layout_width="390dp"
+        android:layout_height="2dp"
+        android:background="#1E000000"
+        app:layout_constraintTop_toBottomOf="@+id/morePromotionInfoTextView"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideLine"
+        tools:layout_editor_absoluteX="20dp" />
+</android.support.constraint.ConstraintLayout>
