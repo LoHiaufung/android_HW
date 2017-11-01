@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab5</string>
+
+    <string name="title_activity_good_detail">goodDetailActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="appwidget_text">当前没有任何信息</string>
+    <string name="add_widget">Add widget</string>
+</resources>
