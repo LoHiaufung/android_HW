@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.xddn2.three.MainActivity">
+    <ImageView
+        android:src="@mipmap/search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/search"
+        />
+    <Button
+        android:id="@+id/search"
+        android:text="搜索"
+        android:background="@color/colorWhite"
+        android:textColor="@color/Gray"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/input"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerList"
+        app:layout_constraintTop_toBottomOf="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"></android.support.v7.widget.RecyclerView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addButton"
+        android:src="@mipmap/add"
+        android:backgroundTint="@color/colorWhite"
+        app:borderWidth="0dp"
+        app:pressedTranslationZ="10dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp" />
+    <ListView
+        android:id="@+id/searchList"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="340dp"
+        ></ListView>
+</android.support.constraint.ConstraintLayout>
