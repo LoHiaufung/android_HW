@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lohiaufung.lab11.MainActivity">
+
+   <EditText
+       android:id="@+id/searchBox"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+      app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+    
+    <Button
+        android:id="@+id/clearBtn"
+        app:layout_constraintLeft_toLeftOf="@+id/searchBox"
+        app:layout_constraintTop_toBottomOf="@+id/searchBox"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:text="CLEAR"/>
+
+    <Button
+        android:id="@+id/fetchBtn"
+        app:layout_constraintRight_toRightOf="@+id/searchBox"
+        app:layout_constraintTop_toBottomOf="@+id/searchBox"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:text="FETCH"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/searchResultList"
+        android:layout_width="0dp"
+        android:layout_height="420dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clearBtn"></android.support.v7.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progressBarInMainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <group
+        android:checkableBehavior="single"
+        app:showAsAction="always">
+
+        <item
+            android:id="@+id/homepage"
+            android:icon="@drawable/ic_action_name"
+            android:title="My Homepage" />
+        <item
+            android:id="@+id/information"
+            android:icon="@drawable/ic_action_information"
+            android:title="Personal Information" />
+    </group>
+    <item
+        android:title="Undefined">
+        <menu>
+            <item
+                android:title="Camera"
+                android:icon="@drawable/ic_menu_camera"/>
+            <item
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share"/>
+            <item
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Setting"/>
+        </menu>
+    </item>
+
+</menu>
